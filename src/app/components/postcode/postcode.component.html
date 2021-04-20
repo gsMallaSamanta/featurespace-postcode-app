@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title>Postcode Details</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="postcodeForm" (ngSubmit)="submit()">
+            <p><input type="text" matInput placeholder="Postcode" formControlName="postcode" required></p>
+        
+            <div class="add-button">
+              <button mat-raised-button color="primary" type="submit" mat-button>Submit</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+        <div class="invalid-error" *ngIf="errors;else success">
+            {{errors?.error.error}}
+        </div>
+
+        <ng-template #success>
+            <div>Country: {{ _postcodeDetails?.country }}</div>
+            <div>Region: {{ _postcodeDetails?.region}}</div>
+
+            <div *ngIf="nearestPostcodeDetails?.length">
+                <h4>Nearest Postcodes</h4>
+                <ul>
+                    <li *ngFor="let place of nearestPostcodeDetails">
+                        {{ place.postcode }} - {{ place.country }}, {{ place.region }}
+                    </li>
+                </ul>
+            </div>
+        </ng-template>
+    </mat-card-content>
+</mat-card>
+

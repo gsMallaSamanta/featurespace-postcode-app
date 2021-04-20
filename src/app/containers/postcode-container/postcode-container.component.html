@@ -1,0 +1,6 @@
+<app-postcode
+    [postcodeDetails]="postcodeDetails$ | async"
+    [nearestPostcodeDetails]="nearestPostcodeDetails$ | async"
+    [errors]="errors$ | async"
+    (submitEvent)="onSubmitClick($event)"
+></app-postcode>

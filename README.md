@@ -1,27 +1,30 @@
 # PostcodeApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+## What I have done
+ - I have implemented the application with `latest version of Angular`.
+ - I have used `NGRX` for state management. I have used old version of it.
+ - I have created a `Single Page Application` using angular routing.
+ - I have used `Angular-Material`.
+ - I have added unit tests just for one sample validation. 
+ - I have implemented the error handling.
+
+## With a little more time
+ - I would have done 100% coverage of unit tests.
+ - I couldn't get time to work on the UX, it could have been much better.
+ - I could have added spinner.
+ - Validation of postcode.
+ - I could have displayed the neaest postcode in a grid.
+
+## Initial Setup
+ - Run `npm install` for adding the node module into the project.
+ - Run `npm install @ngrx/store --save` for adding the ngrx store related dependancies into the project.
+ - Run `npm install @ngrx/effects --save` for adding ngrx effects related dependancies into the project.
+ - Run `npm install @angular/forms --save` incase missing.
+ - If there are still errors related to npm, Run `npm install` again. In certain circumstances npm does perform an "auto prune". So, this step will ensures all expected dependencies are present.
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+ - Run `ng serve` for a dev server. The launch the application using `http://localhost:4200/`.
+ - Incase 4200 is in use, run `ng serve --port=<another port>`. Then launch the application using `http://localhost:<another port>`
 
 ## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng test` to execute the unit tests.
